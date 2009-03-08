@@ -51,7 +51,9 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 = Rev 1.0.6  2009-Mar-07 =
 
-- Upon pressing Save button (in settings), existing About page now saved as {AboutPageName}-yyyy-mm-dd-hh.
+- Added link on Settings page for "Please send us feedback and suggestions".
+- Added PeoplePond logo to Settings page.
+- Upon pressing Save button (in Settings), existing About page now saved as {AboutPageName}-yyyy-mm-dd-hh.
 
 = Rev 1.0.5  2009-Mar-04 =
 
