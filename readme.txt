@@ -345,6 +345,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.0.7  2009-Mar-08 =
+
+- Changed link on Settings page "Please send us feedback and suggestions" to be anchor to contact_us page.
+
 = Rev 1.0.6  2009-Mar-07 =
 
 - Added link on Settings page for "Please send us feedback and suggestions".

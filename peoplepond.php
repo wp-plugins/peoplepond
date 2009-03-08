@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.0.6
+Version: 1.0.7
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.6');
+define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.7');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -179,7 +179,7 @@ function peoplepond_updateOptions ()
 
     // Localize displayed strings
     $signupStr            = __('If you do not have a PeoplePond account, you can signup here: ', 'peoplepond');
-    $sendSuggestionsStr   = __('Please send us feedback and suggestions: ',                      'peoplepond');
+    $sendSuggestionsStr   = __('Please send us feedback and suggestions',                        'peoplepond');
     $peoplepondProfileStr = __('PeoplePond Profile',                                             'peoplepond');
     $emailStr             = __('PeoplePond E-mail Account:',                                     'peoplepond');
     $selectAboutStr       = __('Please Select an About Page:',                                   'peoplepond');
@@ -244,7 +244,7 @@ function peoplepond_updateOptions ()
       ' . $signupStr          . '<a href="' . PEOPLEPOND_REGISTER_URL   . '">' . PEOPLEPOND_REGISTER_URL   . '</a>
       <br /><br />
 
-      ' . $sendSuggestionsStr . '<a href="' . PEOPLEPOND_CONTACT_US_URL . '">' . PEOPLEPOND_CONTACT_US_URL . '</a>
+      <a href="' . PEOPLEPOND_CONTACT_US_URL . '">' . $sendSuggestionsStr . '</a>
       <br /><br />
 
       <hr /><br />
