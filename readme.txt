@@ -18,6 +18,302 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) on Twitter. 
 
+**PeoplePond currently supports over 300 services including:**
+
+* 12seconds
+* 30 Boxes
+* 43 People
+* 43 Places
+* 43 Things
+* 97 Bottles
+* ActiveRain
+* Adocu
+* AgencyScoop
+* AIM
+* All Consuming
+* Amazon
+* Amazon Wish List
+* Amie Street
+* ArtWanted
+* Ask500People
+* Badoo
+* Bambuser
+* Bebo
+* Behance Network
+* Big Contact
+* BlackPlanet
+* Blinklist
+* Blip.fm
+* Blippr
+* Blip.tv
+* Blogger
+* Bloglines
+* Blue Dot (Faves)
+* Bonnaroo
+* Box.net
+* Break
+* Brightkite
+* Bring Light
+* Bungie.net
+* Buzznet
+* CafePress
+* Call of Duty
+* carbonmade
+* Change.org
+* Chickipedia
+* claimID
+* Clipmarks
+* Cluztr
+* coComment
+* COLOURlovers
+* Concrete Hermit
+* Cork'd
+* CouchSurfing
+* Crackle
+* crunchyroll
+* Crusher
+* Current
+* Curse
+* Dailymile
+* Dailymotion
+* Daily Mugshot
+* Dancejam
+* DAYTUM
+* Deezer
+* Delicious
+* deviantART
+* digFoot
+* Digg
+* Diigo
+* Dipity
+* Discogs
+* Disqus
+* Dodgeball
+* Dopplr
+* Dotspotter
+* Douban
+* Driftr
+* Ebay
+* Ecademy
+* eMusic
+* Energize and Engage
+* esnips
+* Etsy
+* Extratasty
+* Facebook
+* FanFiction
+* Favtape
+* Ffffound
+* Finetune
+* Flickr
+* Flixster
+* Fotolog
+* Fotonauts
+* FriendFeed
+* Friendster
+* Funny or Die
+* Furl
+* Fuzz
+* gamerDNA
+* GameSpot
+* Gcast
+* Get Satisfaction
+* GitHub
+* Glogster
+* GoneTooSoon
+* Goodreads
+* Goodreads Author
+* Goodrec
+* Google Reader
+* Grabb.it
+* Groovr
+* Guitar Hero
+* Gyminee
+* HelloTxt
+* hi5
+* Houndbite
+* Howcast
+* Hulu
+* Humble Voice
+* Hype Machine
+* Hyves
+* ICQ
+* identi.ca
+* identoo
+* iJigg
+* iLike
+* iLike Artist
+* Imdb
+* Imeem
+* iminta
+* Instructables
+* Intense Debate
+* Inuyasha FanFiction
+* iReport
+* iseecolor
+* Issuu
+* iTunes PodCast
+* Jaiku
+* JamBase
+* Jumpcut
+* Kaboodle
+* Kirtsy
+* Kiva
+* Lala
+* last.fm
+* LetsMakeRobots
+* LibraryThing
+* lifestream.fm
+* Lijit
+* LinkedIn
+* LiveJournal
+* Ma.gnolia
+* My Mashable
+* Meetup
+* Mister Wong
+* Mixx
+* Modelmayhem
+* MoFuse
+* momentile
+* Mufin
+* Multiply
+* MyBlogLog
+* MyFolio
+* myOpenID
+* MySpace
+* NaNoWriMo
+* Naymz
+* Neopets
+* Netflix
+* Netvibes
+* Newsvine
+* Ning
+* NowPublic
+* Odeo
+* Odeo Channel
+* orkut
+* Pandora
+* PeoplePond
+* Photobucket
+* Photophlow
+* PhotoShelter
+* Picasa
+* Pikchur
+* Plaxo
+* Playfire
+* Plinky
+* Plurk
+* PostCrossing
+* Posterous
+* Pownce
+* Propeller
+* Publr
+* QIK
+* Quotiki
+* Qype
+* Raptr
+* Rate Your Music
+* Reader2
+* RedBubble
+* Reddit
+* RedWire
+* ReverbNation Artist
+* ReverbNation Fan
+* RI Nexus
+* RockBand
+* Ryze
+* Scribd
+* Seesmic
+* ShareThis
+* Shelfari
+* Simpy
+* Six Groups
+* Skitch
+* Skyrock
+* SlideShare
+* Snooth
+* Socialthing
+* SocialURL
+* soup.io
+* SparkPeople
+* Squidoo
+* Stack Overflow
+* Steam
+* Streem
+* Stumbleupon
+* Swurl
+* Tag Foot
+* Tagged
+* Taringa!
+* Technorati
+* The DJ List
+* Thesixtyone
+* ThisNext
+* Threadless
+* Tioti
+* Traackr
+* Trendrr
+* Tribe Hollywood Profile
+* Tribe Hollywood Project
+* TripAdvisor
+* Tripit
+* Trulia
+* TubeMogul
+* Tumblr
+* TV.com
+* Twello
+* Twine
+* Twitpic
+* Twitter
+* TwitterMoms
+* Twitxr
+* TypeKey
+* Upcoming
+* Ustream.tv
+* Veoh
+* Viddler
+* Videojug
+* Vidoop
+* Vimeo
+* Virb
+* Vi.sualize.us
+* Viviti
+* VKontakte
+* Vodpod
+* Vox
+* Wakoopa
+* Webshots
+* We Heart It
+* WhatPulse
+* Where's George?
+* Wikipedia English
+* Wikipedia Spanish
+* Wink
+* Wishlistr
+* Wordie
+* WordPress.com
+* Xanga
+* Xbox LIVE
+* Xfire
+* Xing
+* Yahoo! 360
+* Yahoo! Answers
+* Yahoo! Live
+* Yahoo! Profiles
+* Yelp
+* YouNoodle
+* YouTube
+* YouVersion
+* YowTrip
+* Zazzle
+* Zedge
+* Ziki
+* Zillow
+* ZoomInfo
+* Zoomr
+* Zorpia
+* Zune Social
+
 == Installation ==
 
 **Upgrading?**
