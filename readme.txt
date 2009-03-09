@@ -13,12 +13,12 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 = The PeoplePond Plugin: =
 
-- The plugin retrieves your About Me profile from PeoplePond and displays it on your About page on your blog.
+- Retrieves your About Me profile from PeoplePond and displays it on your About page on your blog.
 - Please see the [Screenshots](http://wordpress.org/extend/plugins/peoplepond/screenshots/) for examples.
 
 = Need to setup your PeoplePond account? =
 
-- [Click here](http://peoplepond.com/register.php) and use the invite code: **adam23**
+- Please [click here](http://peoplepond.com/register.php) and use the invite code: **adam23**
 
 = PeoplePond currently supports over 300 services including: =
 
