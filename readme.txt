@@ -5,20 +5,20 @@ Requires at least: 2.0
 Tested up to: 2.7.1
 Stable tag: trunk
 
-The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog.
+The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displays it on your About page on your blog.
 
 == Description ==
 
-[PeoplePond](http://peoplepond.com/) provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog.
+[PeoplePond](http://peoplepond.com/) provides the tools needed to take ownership of your online identity and reputation management.
+
+= The PeoplePond Plugin: =
+
+- The plugin retrieves your About Me profile from PeoplePond and displays it on your About page on your blog.
+- Please see the [Screenshots](http://wordpress.org/extend/plugins/peoplepond/screenshots/) for examples.
 
 = Need to setup your PeoplePond account? =
 
 - [Click here](http://peoplepond.com/register.php) and use the invite code: **adam23**
-
-= The PeoplePond Plugin: =
-
-- Retrieves your About Me profile from PeoplePond and creates (or updates your existing) About page.
-- Please see the [Screenshots](http://wordpress.org/extend/plugins/peoplepond/screenshots/) for examples.
 
 = PeoplePond currently supports over 300 services including: =
 
