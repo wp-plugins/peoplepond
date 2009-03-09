@@ -11,7 +11,9 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 [PeoplePond](http://peoplepond.com/) provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog.
 
-= Use the invite code **adam23** to setup your PeoplePond account [here](http://peoplepond.com/register.php). =
+= Need to setup your PeoplePond account? =
+
+- [Click here](http://peoplepond.com/register.php) and use the invite code: **adam23**
 
 **The PeoplePond Plugin:**
 
