@@ -349,6 +349,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.0.8  2009-Mar-10 =
+
+- Updates to Bio on PeoplePond.com now refresh immediately on About page.
+
 = Rev 1.0.7  2009-Mar-08 =
 
 - Changed link on Settings page "Please send us feedback and suggestions" to be anchor to contact_us page.

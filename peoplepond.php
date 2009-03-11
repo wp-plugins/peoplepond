@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.0.7
+Version: 1.0.8
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.7');
+define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.8');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -390,12 +390,15 @@ function peoplepond_getAboutPageName ($chosenAboutIn, &$pageNameOut)
     }
 
 
-function peoplepond_loop_start ()
+function peoplepond_the_content ($contentIn)
     {
     // Expose the specific post (WordPress table wp_post) -- so we can check it
     global $post;
 
-    // If this is a PUBLISHED (i.e. active) PeoplePond About Page...
+    // If it's a PeoplePond About Page, we'll reassign this
+    $contentToDisplay = $contentIn;
+
+    // If this is a PeoplePond About Page...
     if (strcmp ($post->post_excerpt, PEOPLEPOND_PLUGIN) == 0)
         {
         // Load existing options from WordPress database
@@ -430,8 +433,14 @@ function peoplepond_loop_start ()
 
             // Store changed options back to WordPress database
             update_option (PEOPLEPOND_OPTIONS, $peoplepondOptions);
+
+            // Reassign the display content to our ADAM data
+            $contentToDisplay = $peepsResponse;
             }
         }
+
+    // Display the page
+    printf ('%s', $contentToDisplay);
     }
 
 
@@ -485,11 +494,11 @@ register_activation_hook (__FILE__, 'peoplepond_createOptions');
 register_deactivation_hook (__FILE__, 'peoplepond_deleteOptions');
 
 
-// Add hook for submenu to the options page
+// Add action hook for submenu to the options page
 add_action ('admin_menu', 'peoplepond_addSubmenu');
 
 
-// Add hook so we can check for "About Page" load -- to do refreshes
-add_action ('loop_start', 'peoplepond_loop_start');
+// Add filter hook so we can check for "About Page" load -- to do refreshes
+add_filter ('the_content', 'peoplepond_the_content');
 
 ?>
