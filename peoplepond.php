@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.0.8
+Version: 1.0.9
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.8');
+define ('PEOPLEPOND_PLUGIN_VERSION',  PEOPLEPOND_PLUGIN . ' v1.0.9');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -127,7 +127,7 @@ function peoplepond_addAboutPage ($pageNameIn, $commentSettingsIn, $peepsRespons
     $rc = 1;  // reset to 0 upon success
 
     // Surround content with plugin-verion div tag
-    $aboutPageContent = sprintf ('<div id=\"%s\">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
+    $aboutPageContent = sprintf ('<div id="%s">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
 
     // Declare the array to hold the post values
     $postArray = array ();
@@ -423,7 +423,7 @@ function peoplepond_the_content ($contentIn)
         elseif ($peoplepondOptions ['md5ContentSum'] != md5 ($peepsResponse))
             {
             // Surround content with plugin-verion div tag
-            $post->post_content = sprintf ('<div id=\"%s\">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
+            $post->post_content = sprintf ('<div id="%s">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
 
             // Update post with refreshed ADAM content
             wp_update_post ($post);
@@ -435,7 +435,7 @@ function peoplepond_the_content ($contentIn)
             update_option (PEOPLEPOND_OPTIONS, $peoplepondOptions);
 
             // Reassign the display content to our ADAM data
-            $contentToDisplay = $peepsResponse;
+            $contentToDisplay = $post->post_content;
             }
         }
 

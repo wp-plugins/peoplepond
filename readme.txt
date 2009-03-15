@@ -38,16 +38,19 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Amie Street
 - ArtWanted
 - Ask500People
+- BackType
 - Badoo
 - Bambuser
 - Bebo
 - Behance Network
 - Big Contact
+- Biznik
 - BlackPlanet
 - Blinklist
 - Blip.fm
 - Blippr
 - Blip.tv
+- BlogCatalog
 - Blogger
 - Bloglines
 - Blue Dot (Faves)
@@ -183,6 +186,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - MyFolio
 - myOpenID
 - MySpace
+- MySXSW
 - NaNoWriMo
 - Naymz
 - Neopets
@@ -194,6 +198,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Odeo
 - Odeo Channel
 - orkut
+- outside.in
 - Pandora
 - PeoplePond
 - Photobucket
@@ -208,6 +213,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - PostCrossing
 - Posterous
 - Pownce
+- Project Playlist
 - Propeller
 - Publr
 - QIK
@@ -218,6 +224,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Reader2
 - RedBubble
 - Reddit
+- Red Room
 - RedWire
 - ReverbNation Artist
 - ReverbNation Fan
@@ -348,6 +355,11 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 2. The PeoplePond Settings page.
 
 == Change History ==
+
+= Rev 1.0.9  2009-Mar-14 =
+
+- Include surrounding plugin-version-number div tag on post_content written to WP database.
+- Add PeoplePond services.
 
 = Rev 1.0.8  2009-Mar-10 =
 
