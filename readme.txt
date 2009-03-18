@@ -363,7 +363,6 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 = Rev 1.1.0  2009-Mar-18 =
 
 - Added link on plugin homepage to PeoplePond Drupal plugin.
-- Removed SXSW promotional registration code.
 
 = Rev 1.0.9  2009-Mar-14 =
 
