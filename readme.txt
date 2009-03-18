@@ -18,7 +18,11 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 = Need to setup your PeoplePond account? =
 
-- Please [click here](http://peoplepond.com/register.php) and use the invite code: **adam23**
+- Please [click here](http://peoplepond.com/register.php) to register.
+
+= Note to Drupal Users =
+
+- Our Drupal module -- which displays your PeoplePond About Me profile on Drupal -- can be downloaded [here](http://drupal.org/project/peoplepond).
 
 = PeoplePond currently supports over 300 services including: =
 
@@ -355,6 +359,11 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 2. The PeoplePond Settings page.
 
 == Change History ==
+
+= Rev 1.1.0  2009-Mar-18 =
+
+- Added link on plugin homepage to PeoplePond Drupal plugin.
+- Removed SXSW promotional registration code.
 
 = Rev 1.0.9  2009-Mar-14 =
 
