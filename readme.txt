@@ -20,9 +20,9 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 - Please [click here](http://peoplepond.com/register.php) to register.
 
-= Note to Drupal Users =
+= Note to Drupal Users: =
 
-- Our Drupal module -- which displays your PeoplePond About Me profile on Drupal -- can be downloaded [here](http://drupal.org/project/peoplepond).
+- Our Drupal module, which displays your PeoplePond About Me profile on Drupal, can be downloaded [here](http://drupal.org/project/peoplepond).
 
 = PeoplePond currently supports over 300 services including: =
 
