@@ -48,6 +48,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Bebo
 - Behance Network
 - Big Contact
+- Bikejournal
 - Biznik
 - BlackPlanet
 - Blinklist
@@ -177,6 +178,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - LinkedIn
 - LiveJournal
 - Ma.gnolia
+- MapMyRide
 - My Mashable
 - Meetup
 - Mister Wong
@@ -187,6 +189,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Mufin
 - Multiply
 - MyBlogLog
+- My Cycling Log
 - MyFolio
 - myOpenID
 - MySpace
@@ -318,6 +321,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - YouTube
 - YouVersion
 - YowTrip
+- Zannel
 - Zazzle
 - Zedge
 - Ziki
@@ -359,6 +363,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 2. The PeoplePond Settings page.
 
 == Change History ==
+
+= Rev 1.1.2  2009-Mar-29 =
+
+- Add new services.
 
 = Rev 1.1.1  2009-Mar-22 =
 
