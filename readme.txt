@@ -364,6 +364,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.1.3  2009-Apr-05 =
+
+- Updated About-page refreshes to key off of (embedded div tag) plugin version string, "PeoplePond-v".
+
 = Rev 1.1.2  2009-Mar-29 =
 
 - Add new services.

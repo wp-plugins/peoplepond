@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.1.2
+Version: 1.1.3
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.2');
+define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.3');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -160,7 +160,6 @@ function peoplepond_addAboutPage ($pageNameIn, $commentSettingsIn, $peepsRespons
     $postArray ['post_status']    = 'publish';
     $postArray ['comment_status'] = $commentSettingsIn;
     $postArray ['post_type']      = 'page';
-    $postArray ['post_excerpt']   = PEOPLEPOND_PLUGIN;   // Plugin keys on this to trigger refreshes
 
     if (wp_insert_post ($postArray) != 0)
         {
@@ -317,10 +316,6 @@ function processAboutPage ($newPageNameIn)
         // Update to 'draft'
         $existingAboutPage ['post_status'] = 'draft';
 
-        // Remove excerpt (which causes the plugin to do refreshes)
-        // We never want to refresh the saved page
-        $existingAboutPage ['post_excerpt'] = '';
-
         // Rename page (append '-saved-Y-m-d-H-i-s'), where:
         // Y ... 4 digit year
         // m ... 2 digit month   (with leading zeros)
@@ -399,7 +394,8 @@ function peoplepond_the_content ($contentIn)
     $contentToDisplay = $contentIn;
 
     // If this is a PeoplePond About Page...
-    if (strcmp ($post->post_excerpt, PEOPLEPOND_PLUGIN) == 0)
+    if ((strstr ($contentIn, "PeoplePond-v")) ||                 // v1.1.1 and after, this is in every about page
+        (strcmp ($post->post_excerpt, PEOPLEPOND_PLUGIN) == 0))  // prior to v1.1.1, post_excerpt must be checked
         {
         // Load existing options from WordPress database
         $peoplepondOptions = get_option (PEOPLEPOND_OPTIONS);
