@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.1.3
+Version: 1.1.4
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.3');
+define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.4');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -104,12 +104,6 @@ function peoplepond_createAboutPage ($pageNameIn, $commentSettingsIn)
     // Post the about page with the new API data
     elseif (peoplepond_addAboutPage ($pageNameIn, $commentSettingsIn, $peepsResponse) == 0)
         {
-        // Update md5ContentSum
-        $peoplepondOptions ['md5ContentSum'] = md5 ($peepsResponse);
-
-        // Store changed options back to WordPress database
-        update_option (PEOPLEPOND_OPTIONS, $peoplepondOptions);
-
         $rc = PEOPLEPOND_RC_OK;
         }
 
@@ -125,9 +119,6 @@ function peoplepond_createAboutPage ($pageNameIn, $commentSettingsIn)
 function peoplepond_addAboutPage ($pageNameIn, $commentSettingsIn, $peepsResponse)
     {
     $rc = 1;  // reset to 0 upon success
-
-    // Surround content with plugin-verion div tag
-    $aboutPageContent = sprintf ('<div id="%s">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
 
     // Declare the array to hold the post values
     $postArray = array ();
@@ -154,7 +145,7 @@ function peoplepond_addAboutPage ($pageNameIn, $commentSettingsIn, $peepsRespons
 
     // Setup the wp_insert_post parameters
     $postArray ['post_author']    = null;
-    $postArray ['post_content']   = $aboutPageContent;
+    $postArray ['post_content']   = $peepsResponse;
     $postArray ['post_title']     = $pageNameIn;
     $postArray ['post_category']  = array (0);
     $postArray ['post_status']    = 'publish';
@@ -387,15 +378,13 @@ function peoplepond_getAboutPageName ($chosenAboutIn, &$pageNameOut)
 
 function peoplepond_the_content ($contentIn)
     {
-    // Expose the specific post (WordPress table wp_post) -- so we can check it
-    global $post;
-
     // If it's a PeoplePond About Page, we'll reassign this
     $contentToDisplay = $contentIn;
 
     // If this is a PeoplePond About Page...
-    if ((strstr ($contentIn, "PeoplePond-v")) ||                 // v1.1.1 and after, this is in every about page
-        (strcmp ($post->post_excerpt, PEOPLEPOND_PLUGIN) == 0))  // prior to v1.1.1, post_excerpt must be checked
+    if ((strstr ($contentIn, "http://peoplepond.com"))   &&
+        (strstr ($contentIn, "PeoplePond Online Ident")) &&
+        (strstr ($contentIn, "Powered by PeoplePond")))
         {
         // Load existing options from WordPress database
         $peoplepondOptions = get_option (PEOPLEPOND_OPTIONS);
@@ -415,23 +404,20 @@ function peoplepond_the_content ($contentIn)
             // just exit - don't update the post
             }
 
-        // Update the about page with the new ADAM data -- but only if the content has changed
-        elseif ($peoplepondOptions ['md5ContentSum'] != md5 ($peepsResponse))
+        // Update the about page with the new ADAM data
+        else
             {
-            // Surround content with plugin-version div tag
-            $post->post_content = sprintf ('<div id="%s">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
+            // Expose the specific post for updating
+            global $post;
+
+            // Copy the ADAM data to the post_content
+            $post->post_content = $peepsResponse;
 
             // Update post with refreshed ADAM content
             wp_update_post ($post);
 
-            // Update md5ContentSum
-            $peoplepondOptions ['md5ContentSum'] = md5 ($post->post_content);
-
-            // Store changed options back to WordPress database
-            update_option (PEOPLEPOND_OPTIONS, $peoplepondOptions);
-
-            // Reassign the display content to our ADAM data
-            $contentToDisplay = $post->post_content;
+            // For display, surround the new content with plugin-version div tag
+            $contentToDisplay = sprintf ('<div id="%s">%s</div>', PEOPLEPOND_PLUGIN_VERSION, $peepsResponse);
             }
         }
 
@@ -459,12 +445,11 @@ function peoplepond_createOptions ()
     get_currentuserinfo ();
 
     // Create the initialOptions array of keys/values
-    $peoplepond_initialOptions = array ('emailAddress'  => strtolower (trim ($current_user->user_email)),
-                                        'bio'           => TRUE,
-                                        'image'         => TRUE,
-                                        'imageWrap'     => TRUE,
-                                        'social'        => TRUE,
-                                        'md5ContentSum' => '');
+    $peoplepond_initialOptions = array ('emailAddress' => strtolower (trim ($current_user->user_email)),
+                                        'bio'          => TRUE,
+                                        'image'        => TRUE,
+                                        'imageWrap'    => TRUE,
+                                        'social'       => TRUE);
 
     // Store the initialOptions to the WordPress database
     add_option (PEOPLEPOND_OPTIONS, $peoplepond_initialOptions);
