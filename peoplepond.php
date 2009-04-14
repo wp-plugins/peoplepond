@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.1.4
+Version: 1.1.5
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.4');
+define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.5');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
@@ -58,6 +58,9 @@ function peoplepond_cURL ($md5_emailAddressIn)
     if ($peoplepondOptions ['image']     == TRUE)   $curlUrl .= '&image=yes';
     if ($peoplepondOptions ['imageWrap'] == TRUE)   $curlUrl .= '&embed=yes';
     if ($peoplepondOptions ['social']    == TRUE)   $curlUrl .= '&social=yes';
+
+    // Append site= parameter
+    $curlUrl .= ('&site=' . $_SERVER ['SERVER_NAME']);
 
     // Create a new cURL resource
     $ch = curl_init ();

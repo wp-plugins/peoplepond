@@ -364,6 +364,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.1.5  2009-Apr-13 =
+
+- Added site= parameter to About data call.
+
 = Rev 1.1.4  2009-Apr-06 =
 
 - Updated to optimize the refreshing of About data.
