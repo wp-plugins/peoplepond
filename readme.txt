@@ -28,6 +28,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 
 - 12seconds
 - 30 Boxes
+- 43marks
 - 43 People
 - 43 Places
 - 43 Things
@@ -40,8 +41,10 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Amazon
 - Amazon Wish List
 - Amie Street
+- aNobli
 - ArtWanted
 - Ask500People
+- Associated Content
 - BackType
 - Badoo
 - Bambuser
@@ -71,6 +74,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - carbonmade
 - Change.org
 - Chickipedia
+- Chi.mp
 - claimID
 - Clipmarks
 - Cluztr
@@ -124,6 +128,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Funny or Die
 - Furl
 - Fuzz
+- Gaia
 - gamerDNA
 - GameSpot
 - Gcast
@@ -147,6 +152,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Humble Voice
 - Hype Machine
 - Hyves
+- I Can Has Cheezburger
 - ICQ
 - identi.ca
 - identoo
@@ -165,12 +171,15 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - iTunes PodCast
 - Jaiku
 - JamBase
+- JamLegend
 - Jumpcut
 - Kaboodle
 - Kirtsy
 - Kiva
 - Lala
 - last.fm
+- Last.fm Label
+- Last.fm Music
 - LetsMakeRobots
 - LibraryThing
 - lifestream.fm
@@ -188,12 +197,13 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - momentile
 - Mufin
 - Multiply
+- My Alltop
 - MyBlogLog
 - My Cycling Log
 - MyFolio
 - myOpenID
 - MySpace
-- MySXSW
+- My SXSW
 - NaNoWriMo
 - Naymz
 - Neopets
@@ -240,6 +250,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Ryze
 - Scribd
 - Seesmic
+- Serious Eats
 - ShareThis
 - Shelfari
 - Simpy
@@ -298,6 +309,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Vodpod
 - Vox
 - Wakoopa
+- Weavemet
 - Webshots
 - We Heart It
 - WhatPulse
@@ -364,6 +376,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.1.6  2009-Apr-17 =
+
+- Added new services.
+
 = Rev 1.1.5  2009-Apr-13 =
 
 - Added site= parameter to About data call.
@@ -378,7 +394,7 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 = Rev 1.1.2  2009-Mar-29 =
 
-- Add new services.
+- Added new services.
 
 = Rev 1.1.1  2009-Mar-22 =
 
