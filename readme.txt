@@ -41,7 +41,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Amazon
 - Amazon Wish List
 - Amie Street
-- aNobli
+- aNobii
 - ArtWanted
 - Ask500People
 - Associated Content
@@ -115,12 +115,14 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Etsy
 - Extratasty
 - Facebook
+- Facebook Pages
 - FanFiction
 - Favtape
 - Ffffound
 - Finetune
 - Flickr
 - Flixster
+- FoodFeed
 - Fotolog
 - Fotonauts
 - FriendFeed
@@ -139,6 +141,7 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Goodreads
 - Goodreads Author
 - Goodrec
+- Google Profiles
 - Google Reader
 - Grabb.it
 - Groovr
@@ -316,6 +319,8 @@ The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displ
 - Where's George?
 - Wikipedia English
 - Wikipedia Spanish
+- Windows Live Profiles
+- Windows Live Spaces
 - Wink
 - Wishlistr
 - Wordie
@@ -375,6 +380,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 2. The PeoplePond Settings page.
 
 == Change History ==
+
+= Rev 1.1.7  2009-Apr-25 =
+
+- Added new services.
 
 = Rev 1.1.6  2009-Apr-17 =
 
