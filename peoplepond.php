@@ -4,7 +4,7 @@
 Plugin Name: PeoplePond
 Plugin URI: http://wordpress.org/extend/plugins/PeoplePond/
 Description: <a href="http://www.peoplepond.com" title="PeoplePond">PeoplePond</a> provides the tools needed to take ownership of your online identity and reputation management. The plugin retrieves your About Me profile from PeoplePond, and displays it in your About page on your blog. To setup, please go to Settings -&gt; PeoplePond.
-Version: 1.1.6
+Version: 1.1.7
 Author: Neil Simon
 Author URI: http://peoplepond.com/
 */
@@ -31,7 +31,7 @@ Author URI: http://peoplepond.com/
 
 // Constants
 define ('PEOPLEPOND_PLUGIN',         'PeoplePond WordPress Plugin');
-define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.6');
+define ('PEOPLEPOND_PLUGIN_VERSION', 'PeoplePond-v1.1.7');
 define ('PEOPLEPOND_OPTIONS',        'peoplepondOptions');
 define ('PEOPLEPOND_API_URL',        'http://adam.peoplepond.com/peeps.php');
 define ('PEOPLEPOND_REGISTER_URL',   'http://www.peoplepond.com/register.php');
