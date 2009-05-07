@@ -381,6 +381,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 
 == Change History ==
 
+= Rev 1.1.8  2009-May-06 =
+
+- Updated code to return the content in the hook peoplepond_the_content().
+
 = Rev 1.1.7  2009-Apr-25 =
 
 - Added new services.
