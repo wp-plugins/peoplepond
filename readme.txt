@@ -2,7 +2,7 @@
 Contributors: Neil Simon
 Tags: identity, professional, visibility, share, content, networking, social, publishing, seo, community, services, ADAM, api, about me, about, AutoDiscovery, authenticate
 Requires at least: 2.0
-Tested up to: 2.7.1
+Tested up to: 2.8
 Stable tag: trunk
 
 The PeoplePond Plugin retrieves your About Me profile from PeoplePond, and displays it on your About page on your blog.
@@ -380,6 +380,10 @@ For the latest news, please follow [@PeoplePond](http://twitter.com/PeoplePond) 
 2. The PeoplePond Settings page.
 
 == Change History ==
+
+= Rev 1.1.9  2009-Jun-13 =
+
+- Tested with WordPress 2.8.
 
 = Rev 1.1.8  2009-May-06 =
 
